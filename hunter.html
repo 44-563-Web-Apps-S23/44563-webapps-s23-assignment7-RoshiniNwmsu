@@ -67,6 +67,7 @@
         Help report
     </div>
     <br>
+    <p><button type="button" class="btn btn-primary" onclick="newGame()">Reset</button></p>
     <div class="container-fluid">
     
       <div class="row">
@@ -182,6 +183,15 @@
                 penalty.innerHTML="Penalty is "+penalty;
             }
         }
-
+        function newGame(){
+            mouseLocation = Math.floor(Math.random()*24)
+            catLocation = Math.floor(Math.random()*24)
+            document.getElementById("bushes").innerHTML = "Number of bushes checked is 0"
+            document.getElementById("penalty").innerHTML = "Penalty is 0"
+            for(var i=0;i<=23;i++){
+                document.getElementById(ids[i]).src="bush.jpg"
+                
+            }
+        }
     </script>
     </html>	
